@@ -3,13 +3,40 @@ import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.5
 
 ApplicationWindow {
-    id: window
+    id: mainWindow
     visible: true
     width: 720
     height: 512
+    flags: Qt.FramelessWindowHint | Qt.Window
 
 
-    menuBar: MenuBar {
+    menuBar: Rectangle {
+        height: 48
+        color: "darkgrey"
+
+        RowLayout {
+            anchors.fill: parent
+
+            Row {
+                Layout.preferredWidth: 144
+                Layout.alignment: Qt.AlignRight
+                Button {
+                    width: 48
+                    text: "\uE921"
+                }
+                Button {
+                    width: 48
+                    text: "\uE922"
+                }
+                Button {
+                    width: 48
+                    text: "\uE8BB"
+                    onClicked: mainWindow.close()
+                }
+            }
+
+        }
+
     }
 
     header: ToolBar {

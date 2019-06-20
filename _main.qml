@@ -27,6 +27,8 @@ ApplicationWindow {
                 Button {
                     width: 48
                     text: "\uE922"
+		    onClicked: mainWindow.showMaximized()
+
                 }
                 Button {
                     width: 48

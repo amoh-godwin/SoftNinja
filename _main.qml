@@ -46,17 +46,20 @@ ApplicationWindow {
                 Layout.alignment: Qt.AlignRight
                 Button {
                     width: 48
+                    font.family: "Segoe MDL2 Assets"
                     text: "\uE921"
                     onClicked: mainWindow.showMinimized()
                 }
                 Button {
                     width: 48
+                    font.family: "Segoe MDL2 Assets"
                     text: "\uE922"
                     onClicked: mainWindow.showMaximized()
 
                 }
                 Button {
                     width: 48
+                    font.family: "Segoe MDL2 Assets"
                     text: "\uE8BB"
                     onClicked: mainWindow.close()
                 }

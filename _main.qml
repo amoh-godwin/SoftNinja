@@ -23,11 +23,12 @@ ApplicationWindow {
                 Button {
                     width: 48
                     text: "\uE921"
+                    onClicked: mainWindow.showMinimized()
                 }
                 Button {
                     width: 48
                     text: "\uE922"
-		    onClicked: mainWindow.showMaximized()
+                    onClicked: mainWindow.showMaximized()
 
                 }
                 Button {

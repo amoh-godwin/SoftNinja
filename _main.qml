@@ -69,7 +69,14 @@ ApplicationWindow {
 
     }
 
-    header: ToolBar {
+    header: Rectangle {
+        width: parent.width
+        height: 48
+        color: "dodgerblue"
+
+        MenuBar {}
+        ToolBar {}
+
     }
 
     Rectangle {

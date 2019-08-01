@@ -42,6 +42,7 @@ Rectangle {
                     Layout.fillWidth: true
                     Layout.preferredHeight: 24
                     color: "transparent"
+                    visible: false
 
                     ToolBar {
                         anchors.fill: parent

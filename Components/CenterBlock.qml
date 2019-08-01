@@ -25,8 +25,14 @@ Rectangle {
                 color: "#f1f1f1"
 
                 TabBar {
+                    id: tbar
                     width: parent.width
                     height: parent.height
+
+                    ButtonGroup {
+                        buttons: tbar.children
+
+                    }
 
                     background: Rectangle {
                         implicitHeight: 24

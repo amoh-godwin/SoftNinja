@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
+import "customs"
 
 Rectangle {
     Layout.bottomMargin: 5
@@ -17,6 +18,38 @@ Rectangle {
             Layout.fillWidth: true
             Layout.preferredHeight: 24
             color: "#0082E8"
+
+            RowLayout {
+                anchors.fill: parent
+                anchors.rightMargin: 4
+                anchors.leftMargin: 4
+
+                Text {
+                    Layout.alignment: Qt.AlignVCenter
+                    text: "Output"
+                    font.family: "Segoe UI Semilight"
+                    color: "white"
+                }
+
+                Row {
+                    Layout.alignment: Qt.AlignRight
+
+                    CustTinyButton {
+                        text: settings.menu_icon
+                    }
+
+                    CustTinyButton {
+                        text: settings.pin_icon
+                    }
+
+                    CustTinyButton {
+                        text: settings.close_icon
+                    }
+
+                }
+
+            }
+
         }
 
         Rectangle {

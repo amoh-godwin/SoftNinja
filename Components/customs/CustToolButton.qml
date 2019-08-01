@@ -3,7 +3,7 @@ import QtQuick.Controls 2.12
 
 ToolButton {
     id: ctrl
-    font.family: "Material Design Icons"
+    font: settings.mat_icon
 
     background: Rectangle {
         color: ctrl.pressed ? "#45777777" : "transparent"

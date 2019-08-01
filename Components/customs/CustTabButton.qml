@@ -5,7 +5,7 @@ TabButton {
     width: 124
 
     background: Rectangle {
-        color: parent.pressed ? "dodgerblue" : "transparent"
+        color: parent.checked ?"dodgerblue" : parent.pressed ? "dodgerblue" : "transparent"
     }
 
     contentItem: Text {

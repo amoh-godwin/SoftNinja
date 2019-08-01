@@ -14,6 +14,7 @@ ApplicationWindow {
 
     Component.onCompleted: mainWindow.showMaximized()
 
+    Settings { id: settings }
 
     menuBar: Rectangle {
         height: 36
@@ -115,27 +116,57 @@ ApplicationWindow {
 
                 CustToolButton {
                     Layout.preferredHeight: 24
-                    //font.family: "Material Design Icons"
-                    text: "\uf8cb"
+                    text: settings.add_f_icon
                 }
 
                 CustToolButton {
                     Layout.preferredHeight: 24
-                    //font.family: "Material Design Icons"
-                    text: "\uf8cb"
+                    text: settings.save_icon
                 }
 
                 CustToolButton {
                     Layout.preferredHeight: 24
-                    //font.family: "Material Design Icons"
-                    text: "\uf8cb"
+                    text: settings.save_all_icon
+                }
+
+                CustToolSeparator {}
+
+                CustToolButton {
+                    Layout.preferredHeight: 24
+                    text: settings.undo_icon
                 }
 
                 CustToolButton {
                     Layout.preferredHeight: 24
-                    //font.family: "Material Design Icons"
-                    text: "\uf8cb"
+                    text: settings.redo_icon
                 }
+
+                CustToolSeparator {}
+
+                CustomComboBox {
+                    model: FreezerModel {}
+                }
+
+                CustomComboBox {
+                    model: RunPlatformModel {}
+                }
+
+                CustomComboBox {
+                    model: RunTypeModel {}
+                }
+
+                CustToolSeparator {}
+
+                CustToolButton {
+                    Layout.preferredHeight: 24
+                    text: settings.run_icon
+                }
+
+                CustToolButton {
+                    Layout.preferredHeight: 24
+                    text: settings.run_icon
+                }
+
 
             }
         }

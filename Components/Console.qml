@@ -20,9 +20,11 @@ Rectangle {
             color: "#0082E8"
 
             RowLayout {
+                anchors.verticalCenter: parent.verticalCenter
                 anchors.fill: parent
                 anchors.rightMargin: 4
                 anchors.leftMargin: 4
+                anchors.bottomMargin: 4
 
                 Text {
                     Layout.alignment: Qt.AlignVCenter
@@ -32,7 +34,7 @@ Rectangle {
                 }
 
                 Row {
-                    Layout.alignment: Qt.AlignRight
+                    Layout.alignment: Qt.AlignVCenter | Qt.AlignRight
 
                     CustTinyButton {
                         text: settings.menu_icon

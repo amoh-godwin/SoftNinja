@@ -1,7 +1,7 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
-import QtQuick.Window 2.12
-import QtQuick.Layouts 1.12
+import QtQuick 2.10
+import QtQuick.Controls 2.3
+import QtQuick.Window 2.3
+import QtQuick.Layouts 1.3
 import "Components" as Comp
 import "Components/customs" as Cust
 
@@ -13,7 +13,14 @@ ApplicationWindow {
     color: "#f1f1f1"
     flags: Qt.FramelessWindowHint | Qt.Window
 
-    Component.onCompleted: mainWindow.showMaximized()
+    Component.onCompleted: {
+        mainWindow.showMaximized()
+    }
+
+    FontLoader {
+        id: font_mat
+        source: "./fonts/materialdesignicons-webfont.ttf"
+    }
 
     Comp.Settings { id: settings }
 

@@ -18,7 +18,8 @@ Component {
 
             Text {
                 id: arrow
-                font: settings.mat_icon
+                font.family: font_mat.name
+                font.pixelSize: 16
                 text: settings.arrow_icon
                 visible: folder
             }
@@ -31,7 +32,8 @@ Component {
 
             Text {
                 id: fold_icon
-                font: settings.mat_icon
+                font.family: font_mat.name
+                font.pixelSize: 16
                 text: folder ? settings.fold_o : settings.doc_icon
             }
 

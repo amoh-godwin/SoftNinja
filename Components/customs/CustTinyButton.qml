@@ -12,7 +12,8 @@ Button {
 
     contentItem: Text {
         text: ctrl.text
-        font: settings.mat_icon
+        font.family: font_mat.name
+        font.pixelSize: 16
         color: "white"
     }
 

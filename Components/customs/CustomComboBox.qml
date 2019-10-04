@@ -14,7 +14,8 @@ ComboBox {
         width: 12
         x: ctrl.width - width - ctrl.rightPadding
         y: (ctrl.availableHeight - height) / 2 + ctrl.topPadding
-        font: settings.mat_icon
+        font.family: font_mat.name
+        font.pixelSize: 16
         text: settings.down_icon
     }
 

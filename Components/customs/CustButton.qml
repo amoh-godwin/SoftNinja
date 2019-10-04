@@ -1,5 +1,5 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
+import QtQuick 2.10
+import QtQuick.Controls 2.10
 
 Button {
     id: ctrl
@@ -12,7 +12,7 @@ Button {
     contentItem: Text {
         padding: ctrl.padding
         text: ctrl.text
-        font.family: "Segoe MDL2 Assets"
+        font.family: font_mat.name
     }
 
 }

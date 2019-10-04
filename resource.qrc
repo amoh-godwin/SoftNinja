@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Components/BlankComponent.qml</file>
+        <file>Components/CenterBlock.qml</file>
+        <file>Components/Console.qml</file>
+        <file>Components/ExplorerDelegate.qml</file>
+        <file>Components/ExplorerModel.qml</file>
+        <file>Components/ExplorerSectionDelegate.qml</file>
+        <file>Components/FreezerModel.qml</file>
+        <file>Components/PropertiesBlock.qml</file>
+        <file>Components/RunPlatformModel.qml</file>
+        <file>Components/RunTypeModel.qml</file>
+        <file>Components/Settings.qml</file>
+        <file>Components/SideBar.qml</file>
+        <file>Components/TextComponent.qml</file>
+        <file>Components/customs/CustButton.qml</file>
+        <file>Components/customs/CustomComboBox.qml</file>
+        <file>Components/customs/CustTabButton.qml</file>
+        <file>Components/customs/CustTinyButton.qml</file>
+        <file>Components/customs/CustToolButton.qml</file>
+        <file>Components/customs/CustToolSeparator.qml</file>
+        <file>fonts/materialdesignicons-webfont.ttf</file>
+        <file>icons/logo.png</file>
+    </qresource>
+</RCC>

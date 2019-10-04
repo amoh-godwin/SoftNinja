@@ -2,8 +2,8 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.12
-import "Components"
-import "Components/customs"
+import "Components" as Comp
+import "Components/customs" as Cust
 
 ApplicationWindow {
     id: mainWindow
@@ -15,7 +15,7 @@ ApplicationWindow {
 
     Component.onCompleted: mainWindow.showMaximized()
 
-    Settings { id: settings }
+    Comp.Settings { id: settings }
 
     menuBar: Rectangle {
         height: 36
@@ -76,16 +76,16 @@ ApplicationWindow {
             Row {
                 //Layout.preferredWidth: 144
                 Layout.alignment: Qt.AlignRight
-                CustButton {
+                Cust.CustButton {
                     text: "\uE921"
                     onClicked: mainWindow.showMinimized()
                 }
-                CustButton {
+                Cust.CustButton {
                     text: "\uE922"
                     onClicked: mainWindow.showMaximized()
 
                 }
-                CustButton {
+                Cust.CustButton {
                     text: "\uE8BB"
                     onClicked: mainWindow.close()
                 }
@@ -115,55 +115,55 @@ ApplicationWindow {
             RowLayout {
                 height: parent.height
 
-                CustToolButton {
+                Cust.CustToolButton {
                     Layout.preferredHeight: 24
                     text: settings.add_f_icon
                 }
 
-                CustToolButton {
+                Cust.CustToolButton {
                     Layout.preferredHeight: 24
                     text: settings.save_icon
                 }
 
-                CustToolButton {
+                Cust.CustToolButton {
                     Layout.preferredHeight: 24
                     text: settings.save_all_icon
                 }
 
-                CustToolSeparator {}
+                Cust.CustToolSeparator {}
 
-                CustToolButton {
+                Cust.CustToolButton {
                     Layout.preferredHeight: 24
                     text: settings.undo_icon
                 }
 
-                CustToolButton {
+                Cust.CustToolButton {
                     Layout.preferredHeight: 24
                     text: settings.redo_icon
                 }
 
-                CustToolSeparator {}
+                Cust.CustToolSeparator {}
 
-                CustomComboBox {
-                    model: FreezerModel {}
+                Cust.CustomComboBox {
+                    model: Comp.FreezerModel {}
                 }
 
-                CustomComboBox {
-                    model: RunPlatformModel {}
+                Cust.CustomComboBox {
+                    model: Comp.RunPlatformModel {}
                 }
 
-                CustomComboBox {
-                    model: RunTypeModel {}
+                Cust.CustomComboBox {
+                    model: Comp.RunTypeModel {}
                 }
 
-                CustToolSeparator {}
+                Cust.CustToolSeparator {}
 
-                CustToolButton {
+                Cust.CustToolButton {
                     Layout.preferredHeight: 24
                     text: settings.run_icon
                 }
 
-                CustToolButton {
+                Cust.CustToolButton {
                     Layout.preferredHeight: 24
                     text: settings.run_icon
                 }
@@ -192,13 +192,13 @@ ApplicationWindow {
                 width: parent.width
                 height: parent.height
 
-                CenterBlock {
+                Comp.CenterBlock {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                 }
 
 
-                PropertiesBlock {
+                Comp.PropertiesBlock {
                     Layout.preferredWidth: main_content_rect.width / 4
                     Layout.fillHeight: true
                 }

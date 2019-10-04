@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
+import QtQuick.Window 2.12
 import QtQuick.Layouts 1.12
 import "Components"
 import "Components/customs"
@@ -7,8 +8,8 @@ import "Components/customs"
 ApplicationWindow {
     id: mainWindow
     visible: true
-    width: 1024
-    height: 512
+    width: Screen.width
+    height: Screen.desktopAvailableHeight
     color: "#f1f1f1"
     flags: Qt.FramelessWindowHint | Qt.Window
 

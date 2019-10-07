@@ -17,9 +17,25 @@ ApplicationWindow {
         mainWindow.showMaximized()
     }
 
+    signal spacePressed(string full_text, string line, int cur_pos)
+    signal enterPressed(string full_text, string line, int cur_pos)
+    signal charPressed(string full_text, string line, int cur_pos)
+
+    onSpacePressed: {
+        Connector.pressed_space(full_text, line, cur_pos)
+    }
+
+    onEnterPressed: {
+        Connector.pressed_enter(full_text, line, cur_pos)
+    }
+
+    onCharPressed: {
+        Connector.pressed_char(full_text, line, cur_pos)
+    }
+
     FontLoader {
         id: font_mat
-        source: "./fonts/materialdesignicons-webfont.ttf"
+        source: "qrc:///fonts/materialdesignicons-webfont.ttf"
     }
 
     Comp.Settings { id: settings }
@@ -229,4 +245,9 @@ ApplicationWindow {
         height: 24
         color: "indigo"
     }
+
+    Connections {
+        target: Connector
+    }
+
 }

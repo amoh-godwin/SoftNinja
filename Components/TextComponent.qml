@@ -17,7 +17,7 @@ Component {
             var curr_ind = tSpace.cursorPosition - 1
             var last_char = tSpace.getText(curr_ind, curr_ind + 1)
 
-            var stat = "</span><br>";
+            var stat = "</div><br>";
             tSpace.insert(tSpace.cursorPosition, stat)
 
             if (last_char == "{") {
@@ -35,7 +35,6 @@ Component {
         }
 
         onInsSpace: {
-            print(tSpace.cursorPosition)
             tSpace.insert(tSpace.cursorPosition, ".")
         }
 
@@ -62,12 +61,12 @@ Component {
                 selectionColor: "indigo"
                 textFormat: TextEdit.RichText
                 tabStopDistance: 4
-                text: "<head>.love {color: red;}</head>"
+                text: "<div>"
 
                 property string raw_text
                 property int curr_tabs: 0
 
-                Component.onCompleted: tSpace.insert(tSpace.cursorPosition, "<span class='love'>Dance</span>");
+                //Component.onCompleted: tSpace.insert(tSpace.cursorPosition, "<span class='love'>Dance</span>");
 
                 background: Rectangle {
                     //color: "dodgerblue"
@@ -97,17 +96,20 @@ Component {
 
                 Keys.onReturnPressed: {
                     // close the span and open a new one for a new word
-                    tSpaceCont.closeWord()
+                    enterPressed(tSpace.text, tSpace.lineCount, tSpace.cursorPosition)
                 }
 
                 Keys.onEnterPressed: {
-                    tSpaceCont.closeWord()
+                    enterPressed(tSpace.text, tSpace.lineCount, tSpace.cursorPosition)
                 }
 
                 Keys.onPressed: {
                     if(event.key === Qt.Key_Space) {
-                        tSpaceCont.finWord()
+                        spacePressed(tSpace.text, tSpace.lineCount, tSpace.cursorPosition)
+                        return
                     }
+
+                    charPressed(tSpace.text, tSpace.lineCount, tSpace.cursorPosition)
                 }
 
             }
